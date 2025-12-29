@@ -1,0 +1,18 @@
+<h1>Мои задачи</h1>
+
+<app-form (createTask)="handleCreateTask($event)"></app-form>
+
+<h2>Задачи:</h2>
+
+@if (todos.length === 0) {
+  <p>Список пуст</p>
+} @else {
+  <ul>
+    @for (task of todos; track $index) {
+      <li class="task-item">
+        {{ task }}
+        <button class="delete-btn" (click)="deleteTask($index)">❌</button>
+      </li>
+    }
+  </ul>
+}

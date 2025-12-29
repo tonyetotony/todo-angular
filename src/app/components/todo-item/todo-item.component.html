@@ -1,0 +1,5 @@
+<li [class.done]="completed">
+  {{ task }}
+  <button (click)="onDelete.emit()">Удалить</button>
+  <button (click)="toggleCompletion()">Выполнить</button>
+</li>
