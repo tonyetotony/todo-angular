@@ -3,7 +3,6 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  //styleUrls: ['./form.component.scss']
   imports: [FormsModule]
 })
 export class FormComponent {
@@ -19,7 +18,7 @@ export class FormComponent {
   addTask() {
     if (this.taskName.trim()) {
       this.createTask.emit(this.taskName);
-      this.taskName = ''; // очищаем поле
+      this.taskName = ''; 
     }
   }
 }
